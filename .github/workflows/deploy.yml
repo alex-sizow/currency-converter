@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
   actions: read
@@ -26,7 +26,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
-          node-version: "22"
+          node-version: "20"  # Изменил на более стабильную версию
           
       - name: Setup pnpm
         uses: pnpm/action-setup@v3
@@ -64,10 +64,6 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     needs: build
-    permissions:
-      contents: write
-      pages: write
-      id-token: write
     steps:
       - name: Debug GitHub Pages settings
         run: |
