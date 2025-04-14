@@ -24,7 +24,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
-          node-version: "18"
+          node-version: "22"
       
       - name: Setup pnpm
         uses: pnpm/action-setup@v2
@@ -52,7 +52,7 @@ jobs:
         run: pnpm run build
       
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
+        uses: actions/upload-pages-artifact@v2
         with:
           path: ./dist
 
