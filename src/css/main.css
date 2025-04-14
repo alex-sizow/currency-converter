@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+
+@import './variables.css';
+@import './reset.css';
+
+
+body {
+  background: linear-gradient(to right, #e0eafc, #cfdef3);
+  font-family: 'Inter', sans-serif;
+  overflow: hidden;
+}
+
+
+html, body {
+  scrollbar-width: none; 
+  -ms-overflow-style: none; 
+}
+::-webkit-scrollbar {
+  display: none;
+}
+
