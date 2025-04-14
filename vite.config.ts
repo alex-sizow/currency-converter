@@ -8,5 +8,7 @@ export default defineConfig({
     alias: {
       '@': '/src'
     }
-  }
+  },
+  base: '/currency-converter/',
+
 })
